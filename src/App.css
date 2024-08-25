@@ -1,0 +1,161 @@
+
+#root {
+  height: auto;
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(90deg, rgba(195, 123, 154, 1) 0%, rgba(164, 193, 228, 1) 100%);
+}
+
+.weatherCard,
+.weatherCardBox {
+  opacity: 1;
+  padding: 20px;
+  max-width: 70%;
+  overflow: hidden;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.wCard {
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgb(205, 193, 237);
+}
+
+.wCardH {
+  flex: 0 0 100px;
+  margin-right: 20px;
+}
+
+.wCardB {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.wCardT {
+  margin-top: 10px;
+  text-align: left;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.wCardBox {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.box {
+  margin: 3px;
+  border-radius: 50%;
+}
+
+@keyframes weatherCard {
+  from {
+    transform: rotate(-90deg);
+  }
+
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.box:hover {
+  opacity: 0.8;
+  cursor: pointer;
+  background-color: black;
+  animation: weatherCard 1s ease-in-out forwards;
+}
+
+@media (max-width: 1024px) {
+
+  .weatherCard,
+  .weatherCardBox {
+    max-width: 80%;
+    padding: 15px;
+  }
+
+  .wCard {
+    flex-direction: column;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .wCardH {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .wCardB {
+    justify-content: center;
+  }
+
+  .box {
+    margin: 10px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .weatherCard,
+  .weatherCardBox {
+    max-width: 90%;
+    padding: 10px;
+  }
+
+  .wCard {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .wCardH {
+    margin-bottom: 10px;
+  }
+
+  .box {
+    margin: 5px;
+    padding: 10px;
+  }
+
+  img {
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  .weatherCard,
+  .weatherCardBox {
+    max-width: 100%;
+    padding: 5px;
+  }
+
+  .wCard {
+    padding: 5px;
+  }
+
+  .wCardT {
+    margin-top: 5px;
+  }
+
+  .box {
+    margin: 2px;
+    padding: 5px;
+  }
+
+  img {
+    border-radius: 5px;
+  }
+}
