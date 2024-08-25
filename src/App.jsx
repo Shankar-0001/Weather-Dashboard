@@ -13,7 +13,7 @@ function App() {
   const apiKey = "18831b05b65c4838bca161129242408";
 
   function LoadWeather(cityName) {
-    axios.get(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=no&alerts=no`)
+    axios.get(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=no&alerts=no`)
       .then((response) => {
         setLocation(response.data);
         setError(null);
